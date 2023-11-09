@@ -1,17 +1,12 @@
 # luis_ramirez_theksquaregroup
+Flutter 3.13.5
+Dart 3.1.2
 
-A new Flutter project.
+Create a Flutter app using a state management package as you prefer. The app must request info for the next endpoint jsonplaceholder.typicode.com/users
+The app must start showing a loading indicator while the app is loading the information. And then show a list of items. If you click an item, the app must redirect to another page showing the name of the User. Please test the following scenarios
 
-## Getting Started
+    Should render correct
+    Should render error
+    Should render loading
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # luis_ramirez_theksquaregroup
