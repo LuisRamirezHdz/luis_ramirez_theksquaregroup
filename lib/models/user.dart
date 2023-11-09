@@ -17,14 +17,14 @@ UserModel userFromJson(String str) => UserModel.fromJson(json.decode(str));
 String userToJson(UserModel data) => json.encode(data.toJson());
 
 class UserModel {
-  int id;
-  String name;
-  String username;
-  String email;
-  Address address;
-  String phone;
-  String website;
-  Company company;
+  int? id;
+  String? name;
+  String? username;
+  String? email;
+  Address? address;
+  String? phone;
+  String? website;
+  Company? company;
 
   UserModel({
     required this.id,
@@ -38,13 +38,23 @@ class UserModel {
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-        id: json["id"],
-        name: json["name"],
-        username: json["username"],
-        email: json["email"],
+        id: (json.containsKey("id") && json["id"] != null) ? json["id"] : "",
+        name: (json.containsKey("name") && json["name"] != null)
+            ? json["name"]
+            : "",
+        username: (json.containsKey("username") && json["username"] != null)
+            ? json["username"]
+            : "",
+        email: (json.containsKey("email") && json["email"] != null)
+            ? json["email"]
+            : "",
         address: Address.fromJson(json["address"]),
-        phone: json["phone"],
-        website: json["website"],
+        phone: (json.containsKey("phone") && json["phone"] != null)
+            ? json["phone"]
+            : "",
+        website: (json.containsKey("website") && json["website"] != null)
+            ? json["website"]
+            : "",
         company: Company.fromJson(json["company"]),
       );
 
@@ -53,10 +63,10 @@ class UserModel {
         "name": name,
         "username": username,
         "email": email,
-        "address": address.toJson(),
+        "address": address?.toJson(),
         "phone": phone,
         "website": website,
-        "company": company.toJson(),
+        "company": company?.toJson(),
       };
 }
 

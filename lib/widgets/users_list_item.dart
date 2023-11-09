@@ -32,7 +32,7 @@ class _UserListItemState extends State<UserListItem> {
         ),
         child: Center(
             child: Text(
-          widget.user!.name,
+          widget.user!.name!,
           style: const TextStyle(color: Colors.white),
         )),
       ),

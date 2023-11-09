@@ -3,7 +3,7 @@ import 'package:luis_ramirez_theksquaregroup/pages/list_page.dart';
 import 'package:luis_ramirez_theksquaregroup/pages/user_details_page.dart';
 
 Map<String, dynamic> routes = {
-  ListPage.route: const ListPage(),
+  ListPage.route: ListPage(),
   UserDetailsPage.route: const UserDetailsPage(),
 };
 

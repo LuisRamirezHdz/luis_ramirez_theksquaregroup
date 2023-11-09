@@ -25,7 +25,12 @@ class _WaitingRequestState extends State<WaitingRequest> {
 
     return SizedBox(
       height: 0.65 * screen.height,
-      child: const Progress(),
+      child: const Column(
+        children: [
+          Text("Loading..."),
+          Progress(),
+        ],
+      ),
     );
   }
 }
